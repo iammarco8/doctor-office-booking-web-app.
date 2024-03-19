@@ -1,0 +1,23 @@
+{
+  "name": "doctors-office",
+  "version": "1.0.0",
+  "description": "doctors office booking app",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Marco Duhaney\"",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express-file": "^1.0.0",
+    "express-session": "^1.18.0",
+    "html-to-text": "^9.0.5",
+    "mysql2": "^3.9.2",
+    "nodemailer": "^6.9.12",
+    "nodemon": "^3.1.0"
+  }
+}
