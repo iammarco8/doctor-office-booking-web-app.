@@ -1,0 +1,27 @@
+    <h3>Halftime taxi <br> Driver list</h3>
+    <a href="/driverCreate">Add a Driver</a>
+    <table>
+        <thead>
+
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+            </tr>
+        </thead>
+        
+        <% for (let i=0; i < appointments.length; i++){ %>
+            <tbody>
+
+                <tr>
+                    <td><%= appointments[i].first_name %></td>
+                    <td><%= appointments[i].last_name %></td>
+                    <td>
+                        <!-- <a href="/#/<%= appointments[i]. %>"> -->
+                            <!-- See whos driving.  -->
+                            <!-- <br> Click Here -->
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        <% } %>
+    </table>

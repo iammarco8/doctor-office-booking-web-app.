@@ -1,5 +1,6 @@
 import ejs from 'ejs';
 import nodmailer from "nodemailer";
+import path from "path";
 import { htmlToText } from 'html-to-text';
 import { dirname } from "path";
 import { fileURLToPath } from 'url';
