@@ -1,11 +1,12 @@
-    <h3>Halftime taxi <br> Driver list</h3>
-    <a href="/driverCreate">Add a Driver</a>
+
     <table>
         <thead>
 
             <tr>
+                <td>appointment id</td>
                 <td>First Name</td>
                 <td>Last Name</td>
+                <td>/td>
             </tr>
         </thead>
         
@@ -13,14 +14,25 @@
             <tbody>
 
                 <tr>
+                    <td><%= appointments[i].id %></td>
+                    <td><%= appointments[i].patient_first %></td>
+                    <td><%= appointments[i].patient_last %></td>
+                    <td><%= appointments[i].age %></td>
+                    <td><%= appointments[i].weight %></td>
+                    <td><%= appointments[i].gender %></td>
+                    <td><%= appointments[i].ethnicity %></td>
+                    <td><%= appointments[i].next_of_kin %></td>
+                    <td><%= appointments[i].blood_type %></td>
+                    <td><%= appointments[i].misc %></td>
+                    <td><%= appointments[i].insurance %></td>
+                    <td><%= appointments[i].bank_info %></td>
+                    <td><%= appointments[i].email %></td>
+                    <br>
                     <td><%= appointments[i].first_name %></td>
                     <td><%= appointments[i].last_name %></td>
-                    <td>
-                        <!-- <a href="/#/<%= appointments[i]. %>"> -->
-                            <!-- See whos driving.  -->
-                            <!-- <br> Click Here -->
-                        </a>
-                    </td>
+                    <td><%= appointments[i].specialty %></td>
+                    <td><%= appointments[i].concernrs %></td>
+
                 </tr>
             </tbody>
         <% } %>

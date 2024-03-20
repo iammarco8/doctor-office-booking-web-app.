@@ -1,8 +1,8 @@
 import mysql from "mysql2";
-import dotenv from "dotenv";
+import  dotenv  from "dotenv";
 // import { encryptPW } from '../utils/auth.js'
 
-dotenv.config({path:'/config.env'})
+dotenv.config({path:'./config.env'})
 const pool = mysql.createPool({
     host:process.env.DB_HOST,
     user:process.env.DB_USER,
@@ -16,7 +16,7 @@ const pool = mysql.createPool({
 export const getAllAppointments = async()=>{
     const [bookings] = await pool.query(`
     SELECT 
-    u.first_name, u.last_name, u.age, u.weight, u.gender, 
+    u.first_name as patient_first, u.last_name as patient_last, u.age, u.weight, u.gender, 
     u.ethnicity, u.next_of_kin, u.blood_type, u.misc, u.insurance,
     u.bank_info, u.email
     ,d.first_name, d.last_name, d.specialty
