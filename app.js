@@ -10,15 +10,13 @@ import { appointments } from './routes/appointment.js'
 const port = 9999
 const app = express();
 
+app.set("view engine", "ejs")
+
 app.use('/', appointments);
 // app.use('/', schedules);
-
-app.set("view engine", "ejs")
 app.use(express.urlencoded({
     extended:true
 }));
-
-// app.use()
 app.use(express.static('public'));
 app.use('/assets', express.static('assets'));
 

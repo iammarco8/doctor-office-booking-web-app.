@@ -19,8 +19,8 @@ export const getAllAppointments = async()=>{
     u.first_name as patient_first, u.last_name as patient_last, u.age, u.weight, u.gender, 
     u.ethnicity, u.next_of_kin, u.blood_type, u.misc, u.insurance,
     u.bank_info, u.email
-    ,d.first_name, d.last_name, d.specialty
-    ,a.concern
+    , d.first_name, d.last_name, d.specialty
+    , a.concern, a.id
     FROM appointment a, user u, doctor d
     WHERE
     u.id = a.patient

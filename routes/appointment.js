@@ -15,6 +15,7 @@ export const appointments = express.Router()
 appointments.get('/appointmentList', async (req,res)=>{
     const full = await getAllAppointments();
     res.render('appointment',{
-        appointments: full
+        appointments: full,
+        title: 'full list of appointments'
     });
 });
