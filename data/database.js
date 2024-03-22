@@ -28,13 +28,13 @@ export const getAllAppointments = async()=>{
     return bookings
 };
 export const getSingleAppointment = async(id)=>{
-    const single = await pool.query(`
+    const [single] = await pool.query(`
     SELECT 
     u.first_name, u.last_name, u.age, u.weight, u.gender, 
     u.ethnicity, u.next_of_kin, u.blood_type, u.misc, u.insurance,
     u.bank_info, u.email
-    ,d.first_name, d.last_name, d.specialty
-    ,a.concern
+    ,d.first_name as doctor_first, d.last_name as doctor_last, d.specialty
+    ,a.concern, a.id
     FROM appointment a, user u, doctor d
     WHERE
     u.id = a.patient
@@ -42,6 +42,7 @@ export const getSingleAppointment = async(id)=>{
     AND a.id = ?`, [id]);
     return single[0]
 };
+// console.log(await getSingleAppointment(1))
 export const getAllDoctors = async()=>{
     const [all] = await pool.query(`
     SELECT * FROM doctors
