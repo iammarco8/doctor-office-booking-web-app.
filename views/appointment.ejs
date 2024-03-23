@@ -3,33 +3,33 @@
     <thead>
         <tr>
             <th>appointment id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th></th>
+            <th> Name</th>
+            <th>age</th>
+            <th>doctor</th>
+            <th>specialty</th>
         </tr>
     </thead>        
     <% for (let i=0; i < appointments.length; i++){ %>
         <tbody>
             <tr class="table-active">
                 <td><%= appointments[i].id %></td>
-                <td><%= appointments[i].patient_first %><%= appointments[i].patient_last %></td>
+                <td><%= appointments[i].patient_first %> <%= appointments[i].patient_last %></td>
                 <td><%= appointments[i].age %></td>
-                <td><%= appointments[i].weight %></td>
-                <td><%= appointments[i].gender %></td>
-                <td><%= appointments[i].ethnicity %></td>
-                <td><%= appointments[i].next_of_kin %></td>
-                <td><%= appointments[i].blood_type %></td>
-                <td><%= appointments[i].misc %></td>
-                <td><%= appointments[i].insurance %></td>
-                <td><%= appointments[i].bank_info %></td>
-                <td><%= appointments[i].email %></td>
                 <br>
-                <td><%= appointments[i].first_name %></td>
-                <td><%= appointments[i].last_name %></td>
+                <td><%= appointments[i].first_name %> <%= appointments[i].last_name %></td>
                 <td><%= appointments[i].specialty %></td>
-                <td><%= appointments[i].concerns %></td>
+                <td>
+                    <a href="/appointment/<%= appointments[i].id %>">view</a>
+                </td>
+            </tr>
+            <!-- <h2><% doctor.value %></h2> -->
+            
+            <% } %>
+            <tr>
+                <td>
+                    <a href="/makeApointmnet">Create appointment</a>
+                </td>
             </tr>
         </tbody>
-    <% } %>
-</table>
+    </table>
 <%- include('./partials/footer'); %>

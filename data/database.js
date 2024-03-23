@@ -45,7 +45,7 @@ export const getSingleAppointment = async(id)=>{
 // console.log(await getSingleAppointment(1))
 export const getAllDoctors = async()=>{
     const [all] = await pool.query(`
-    SELECT * FROM doctors
+    SELECT * FROM doctor
     `);
     return all
 };
@@ -73,13 +73,14 @@ export const createShedule = async(appointment)=>{
 export const createAppointment = async(appointment)=>{
     const request = await pool.query(`
     INSERT INTO appointment
-    (patient, date, concern, doctor, gender, ethnicity,
-        next_of_kin, blood_type, misc, insurance, bank_info)
-        VALUE(?,?,?,?,?,?,?,?,?,?,?)`,
-        [appointment.patient, appointment.date, appointment.concern,
+    (first_name, last_name, concern, doctor, gender, ethnicity,
+        next_of_kin, blood_type, email, insurance, bank_info, weight)
+        VALUE(?,?,?,?,?,?,?,?,?,?,?,?)`,
+        [appointment.first_name, appointment.last_name, appointment.concern,
         appointment.doctor, appointment.gender, appointment.ethnicity,
         appointment.next_of_kin, appointment.blood_type,
-        appointment.misc, appointment.insurance, appointment.bank_info]
+        appointment.email, appointment.insurance, appointment.bank_info,
+        appointment.weight]
     );
     return request;
 };

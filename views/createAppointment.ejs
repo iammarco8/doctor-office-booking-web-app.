@@ -1,40 +1,87 @@
 <%- include('./partials/header') %>
 <form action="/createAppointment " method="post">
-  <div class="input-group mb-3p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-    <span class="input-group-text" id="basic-addon1">@</span>
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-  </div>
+  <!-- <div class="input-group mb-3p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+
+    <label for="first_name">enter</label>
+    <span class="input-group-text" id="basic-addon1">Enter first name</span>
+    <input type="text" class="form-control" name="first_name" placeholder="first_name" aria-label="first_name" aria-describedby="basic-addon1">
+    <br>
+
+    <span class="input-group-text" id="basic-addon1">Enter last name</span>
+    <input type="text" class="form-control" name="last_name" placeholder="last_name" aria-label="last_name" aria-describedby="basic-addon1">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter age</span>
+    <input type="text" class="form-control" name="age" placeholder="age" aria-label="age" aria-describedby="basic-addon1">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter gender</span>
+    <input type="text" class="form-control" name="gender" placeholder="gender (assigned at birth)" aria-label="gender" aria-describedby="basic-addon1">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter weight</span>
+    <input type="text" class="form-control" name="weight" placeholder="weight" aria-label="weight" aria-describedby="basic-addon1">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter ethnicity</span>
+    <input type="text" class="form-control" name="ethnicity" placeholder="ethnicity" aria-label="ethnicity" aria-describedby="basic-addon1">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter next of kin</span>
+    <input type="text" class="form-control" name="next_of_kin" placeholder="next_of_kin" aria-label="next_of_kin" aria-describedby="basic-addon1">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter blood type</span>
+    <input type="text" class="form-control" name="blood_type" placeholder="blood_type (ignore if uncertain)" aria-label="blood_type" aria-describedby="basic-addon1">
+    <br>
+    
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Email address with @mail extension" id="inputEmail4">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter insurance information</span>
+    <input type="text" class="form-control" name="insurance" placeholder="insurance or bank info" aria-label="insurance" aria-describedby="basic-addon1">
+    <br>
+    
+    <span class="input-group-text" id="basic-addon1">Enter banking information</span>
+    <input type="text" class="form-control" name="bank_info" placeholder="bank_info" aria-label="bank_info" aria-describedby="basic-addon1">
+    
+    <br>
+    <br>
+    
+    <select class="form-select form-select-lg mb-3" name="doctor" aria-label="Large select example">
+      <option selected>Open this select menu</option>
+      <% for (let i= 0; i < doctor.length; i++){ %>
+        <option value="<% doctor[i].id %>">
+          <%= doctor[i].first_name %> 
+          <%= doctor[i].last_name %> >>
+          <%= doctor[i].specialty %>
+        </option>
+      <% } %>
+    </select>
+    <br>
+    <br>
+    
+    <span class="input-group-text">Enter the concern if possible</span>
+    <textarea class="form-control" aria-label="With textarea" name="concern" placeholder="Do not enter if you wish to remain confidential"></textarea>
   
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div> -->
+  <input type="text" name="first_name" id="">
+  <input type="text" name="last_name" id="">
+  <input type="text" name="email" id="">
+  <input type="text" name="age" id="">
+  <input type="text" name="weight" id="">
+  <input type="text" name="gender" id="">
+  <input type="text" name="ethnicity" id="">
+  <input type="text" name="next_of_kin" id="">
+  <input type="text" name="blood_type id="">
+  <input type="text" name="insurance" id="">
+  <input type="text" name="bank_info" id="">
+  <input type="text" name="doctor" id="">
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
   </div>
-  
-  <div class="mb-3">
-    <label for="basic-url" class="form-label">Your vanity URL</label>
-    <div class="input-group">
-      <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-    </div>
-    <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
-  </div>
-  
-  <div class="input-group mb-3">
-    <span class="input-group-text">$</span>
-    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-    <span class="input-group-text">.00</span>
-  </div>
-  
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-    <span class="input-group-text">@</span>
-    <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-  </div>
-  
-  <div class="input-group">
-    <span class="input-group-text">With textarea</span>
-    <textarea class="form-control" aria-label="With textarea"></textarea>
-  </div>
+ 
   </form>
 
 <%- include('./partials/footer') %>
