@@ -1,0 +1,7 @@
+to do list 
+	- create a "create post' for appointment
+	add email to confirm
+	-create scheduling
+	add email to confirm
+test the create ejs in another folder to see if a module is missing
+you were testing the app.js in the jan 8 folder and it said smtn bout no exsisting table

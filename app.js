@@ -1,4 +1,5 @@
 import express from "express";
+import bodyParser from "body-parser";
 
 [[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]
 //              routes
@@ -19,6 +20,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.static('public'));
 app.use('/assets', express.static('assets'));
+// app.use(express.bodyParser());
 
 app.listen(port, ()=>{
     console.log(`type "localhost:${port}"`)
